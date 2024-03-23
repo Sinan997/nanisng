@@ -8,5 +8,19 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "keywords": [
+    "angular"
+  ],
+  "author": {
+    "name": "Sinan Öztürk"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    "./assets/*": {
+      "default": "./assets/*"
+    }
+  }
 }

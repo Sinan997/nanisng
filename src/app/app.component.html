@@ -1,2 +1,14 @@
-<p>app component works!</p>
-<n-button></n-button>
+<div class="outer">
+  <h3>Basic Buttons</h3>
+  <div style="display: flex; gap: 0.5rem">
+    <n-button label="Primary"></n-button>
+    <n-button label="Secondary" [color]="color()" (click)="makeDanger()"></n-button>
+    <n-button label="Success" color="success"></n-button>
+    <n-button label="Danger" color="danger"></n-button>
+    <n-button label="Warning" color="warning"></n-button>
+    <n-button label="Info" color="info"></n-button>
+    <n-button label="Light" color="light"></n-button>
+    <n-button label="Dark" color="dark"></n-button>
+    <n-button label="Link" color="link"></n-button>
+  </div>
+</div>

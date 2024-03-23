@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "nanisng": ["packages/components/src/index.ts"],
+      "nanisng/assets": ["packages/components/assets/src/index.ts"],
       "nanisng/button": ["packages/components/button/src/index.ts"]
     }
   },

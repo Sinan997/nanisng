@@ -1,0 +1,54 @@
+$blue: #0d6efd;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #d63384;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #198754;
+$teal: #20c997;
+$cyan: #0dcaf0;
+
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000;
+
+$primary: $blue;
+$primary-bg-hover: darken($primary, 10%);
+$primary-border-hover: darken($primary, 15%);
+
+$secondary: $gray-600;
+$secondary-bg-hover: darken($secondary, 10%);
+$secondary-border-hover: darken($secondary, 15%);
+
+$success: $green;
+$success-bg-hover: darken($success, 10%);
+$success-border-hover: darken($success, 15%);
+
+$info: $cyan;
+$info-bg-hover: lighten($info, 10%);
+$info-border-hover: lighten($info, 15%);
+
+$warning: $yellow;
+$warning-bg-hover: lighten($warning, 10%);
+$warning-border-hover: lighten($warning, 15%);
+
+$danger: $red;
+$danger-bg-hover: darken($danger, 10%);
+$danger-border-hover: darken($danger, 15%);
+
+$light: $gray-100;
+$light-bg-hover: darken($light, 10%);
+$light-border-hover: darken($light, 15%);
+
+$dark: $gray-900;
+$dark-bg-hover: lighten($dark, 10%);
+$dark-border-hover: lighten($dark, 15%);
