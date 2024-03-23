@@ -12,6 +12,7 @@ import { ButtonComponent } from 'nanisng/button';
 export class AppComponent {
   count = 0;
   color = signal('secondary');
+  loading = signal(false);
 
   makeDanger(){
     if(this.count % 2 === 0){
@@ -20,5 +21,12 @@ export class AppComponent {
       this.color.set('secondary');
     }
     this.count++;
+  }
+
+  makeLoading(){
+    this.loading.set(true);
+    setTimeout(() => {
+      this.loading.set(false);
+    }, 2000);
   }
 }

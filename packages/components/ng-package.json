@@ -4,5 +4,8 @@
   "lib": {
     "entryFile": "src/index.ts"
   },
-  "assets": ["./assets"]
+  "assets": ["./assets"],
+  "allowedNonPeerDependencies": [
+    "@fortawesome/fontawesome-free"
+  ]
 }
