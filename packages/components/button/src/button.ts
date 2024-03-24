@@ -17,9 +17,9 @@ import {
   template: `
     <button #btn [class]="classList()" [disabled]="loading()">
       @if(loading()) {
-      <i class="{{ loadingIcon() }}"></i>
+      <i class="{{ loadingIcon() }}" [ngClass]="loadingIcon() && icon() ? 'me-1': ''"></i>
       } @if(icon() && iconPos() === 'left') {
-      <i class="{{ icon() }} ms-1"></i>
+      <i class="{{ icon() }}"></i>
       {{ label() }}
       }@else {
       {{ label() }}
@@ -36,8 +36,8 @@ export class ButtonComponent {
   icon = input<string>('');
   iconPos = input<string>('left');
   loading = input<boolean>(false);
-  disabled = input<boolean>(false);
   loadingIcon = input<string>('fas fa-spinner fa-spin');
+  disabled = input<boolean>(false);
   shadow = input<boolean>(false);
   rounded = input<boolean>(false);
   outlined = input<boolean>(false);

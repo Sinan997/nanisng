@@ -1,0 +1,86 @@
+<div class="ms-2">
+  <h3 class="mt-5">Colors</h3>
+  <div style="display: flex; gap: 0.5rem">
+    <n-button label="Primary"></n-button>
+    <n-button label="Secondary" color="secondary"></n-button>
+    <n-button label="Success" color="success"></n-button>
+    <n-button label="Danger" color="danger"></n-button>
+    <n-button label="Warning" color="warning"></n-button>
+    <n-button label="Info" color="info"></n-button>
+    <n-button label="Light" color="light"></n-button>
+    <n-button label="Dark" color="dark"></n-button>
+    <n-button label="Link" color="link"></n-button>
+  </div>
+  <h3 class="mt-5">Outlined Buttons</h3>
+  <div style="display: flex; gap: 0.5rem">
+    <n-button label="Primary" [outlined]="true"></n-button>
+    <n-button label="Secondary" color="secondary" [outlined]="true"></n-button>
+    <n-button label="Success" color="success" [outlined]="true"></n-button>
+    <n-button label="Danger" color="danger" [outlined]="true"></n-button>
+    <n-button label="Warning" color="warning" [outlined]="true"></n-button>
+    <n-button label="Info" color="info" [outlined]="true"></n-button>
+    <n-button label="Light" color="light" [outlined]="true"></n-button>
+    <n-button label="Dark" color="dark" [outlined]="true"></n-button>
+    <n-button label="Link" color="link" [outlined]="true"></n-button>
+  </div>
+  <h3 class="mt-5">Icon Buttons</h3>
+  <div style="display: flex; gap: 0.5rem">
+    <n-button label="Primary" icon="fa-solid fa-plus"></n-button>
+    <n-button label="Secondary" color="secondary" icon="fa-solid fa-minus" iconPos="right"></n-button>
+    <n-button label="Success" color="success" icon="fa-solid fa-list" iconPos="right"></n-button>
+    <n-button label="Danger" color="danger"></n-button>
+    <n-button label="Warning" color="warning"></n-button>
+    <n-button label="Info" color="info"></n-button>
+    <n-button label="Light" color="light"></n-button>
+    <n-button label="Dark" color="dark"></n-button>
+    <n-button label="Link" color="link"></n-button>
+  </div>
+  <h3 class="mt-5">Loading</h3>
+  <div style="display: flex; gap: 0.5rem">
+    <n-button label="Primary" [loading]="loading()" (click)="makeLoading()"></n-button>
+    <n-button label="Secondary" color="secondary" loadingIcon="fa-solid fa-plus fa-spin" [loading]="loading()" (click)="makeLoading()"></n-button>
+    <n-button label="Success" color="success" [loading]="loading()" loadingIcon="fa-solid fa-minus fa-spin" (click)="makeLoading()"></n-button>
+    <n-button label="Danger" color="danger" [loading]="loading()" loadingIcon="fa-solid fa-list fa-spin" (click)="makeLoading()"></n-button>
+    <n-button label="Warning" color="warning" [loading]="loading()" (click)="makeLoading()"></n-button>
+    <n-button label="Info" color="info" [loading]="loading()" (click)="makeLoading()"></n-button>
+    <n-button label="Light" color="light" [loading]="loading()" (click)="makeLoading()"></n-button>
+    <n-button label="Dark" color="dark" [loading]="loading()" (click)="makeLoading()"></n-button>
+    <n-button label="Link" color="link" [loading]="loading()" (click)="makeLoading()"></n-button>
+  </div>
+  <h3 class="mt-5">Disabled</h3>
+  <div style="display: flex; gap: 0.5rem">
+    <n-button label="Primary" [disabled]="true"></n-button>
+    <n-button label="Secondary" color="secondary" [disabled]="true"></n-button>
+    <n-button label="Success" color="success" [disabled]="true"></n-button>
+    <n-button label="Danger" color="danger" [disabled]="true"></n-button>
+    <n-button label="Warning" color="warning" [disabled]="true"></n-button>
+    <n-button label="Info" color="info" [disabled]="true"></n-button>
+    <n-button label="Light" color="light" [disabled]="true"></n-button>
+    <n-button label="Dark" color="dark" [disabled]="true"></n-button>
+    <n-button label="Link" color="link" [disabled]="true"></n-button>
+  </div>
+  <h3 class="mt-5">Shadow</h3>
+  <div style="display: flex; gap: 0.5rem">
+    <n-button label="Primary" [shadow]="true"></n-button>
+    <n-button label="Secondary" color="secondary" [shadow]="true"></n-button>
+    <n-button label="Success" color="success" [shadow]="true"></n-button>
+    <n-button label="Danger" color="danger" [shadow]="true"></n-button>
+    <n-button label="Warning" color="warning" [shadow]="true"></n-button>
+    <n-button label="Info" color="info" [shadow]="true"></n-button>
+    <n-button label="Light" color="light" [shadow]="true"></n-button>
+    <n-button label="Dark" color="dark" [shadow]="true"></n-button>
+    <n-button label="Link" color="link" [shadow]="true"></n-button>
+  </div>
+  <h3 class="mt-5">Rounded</h3>
+  <div style="display: flex; gap: 0.5rem">
+    <n-button label="Primary" [rounded]="true"></n-button>
+    <n-button label="Secondary" color="secondary" [rounded]="true"></n-button>
+    <n-button label="Success" color="success" [rounded]="true"></n-button>
+    <n-button label="Danger" color="danger" [rounded]="true"></n-button>
+    <n-button label="Warning" color="warning" [rounded]="true"></n-button>
+    <n-button label="Info" color="info" [rounded]="true"></n-button>
+    <n-button label="Light" color="light" [rounded]="true"></n-button>
+    <n-button label="Dark" color="dark" [rounded]="true"></n-button>
+    <n-button label="Link" color="link" [rounded]="true"></n-button>
+  </div>
+</div>
