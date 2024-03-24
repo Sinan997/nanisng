@@ -1,0 +1,13 @@
+<div class="m-3">
+  <h3 class="mt-5">Input Text</h3>
+  <h3 class="mt-5">Reactive Forms</h3>
+  <form [formGroup]="form" (ngSubmit)="save()">
+    <label for="isim">İsim</label>
+    <n-input-text labelId="isim" controlName="name" class="mb-1"></n-input-text>
+    <n-button type="submit" label="save"></n-button>
+  </form>
+
+  <h3 class="mt-5">NgModel</h3>
+  <n-input-text [(value)]="title" size="lg"></n-input-text>
+  {{title}}
+</div>

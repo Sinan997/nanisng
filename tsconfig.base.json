@@ -17,7 +17,8 @@
     "paths": {
       "nanisng": ["packages/components/src/index.ts"],
       "nanisng/assets": ["packages/components/assets/src/index.ts"],
-      "nanisng/button": ["packages/components/button/src/index.ts"]
+      "nanisng/button": ["packages/components/button/src/index.ts"],
+      "nanisng/input-text": ["packages/components/input-text/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

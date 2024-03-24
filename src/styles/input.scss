@@ -1,0 +1,36 @@
+.n-input {
+  display: block;
+  width: 100%;
+  padding: $input-padding-y $input-padding-x;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: $input-bg;
+  background-clip: padding-box;
+  border: 1px solid $input-border-color;
+  border-radius: $input-border-radius;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  &:focus {
+    color: #495057;
+    background-color: $input-bg;
+    border-color: $input-focus-border-color;
+    outline: 0;
+    box-shadow: $input-focus-box-shadow;
+  }
+}
+
+.n-input-sm {
+  font-size: 0.875rem;
+  padding: $input-padding-y-sm $input-padding-x-sm;
+}
+
+.n-input-md {
+  font-size: 1rem;
+  padding: $input-padding-y-md $input-padding-x-md;
+}
+
+.n-input-lg {
+  font-size: 1.25rem;
+  padding: $input-padding-y-lg $input-padding-x-lg;
+}

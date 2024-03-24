@@ -15,7 +15,7 @@ import {
   standalone: true,
   imports: [NgClass],
   template: `
-    <button #btn [class]="classList()" [disabled]="loading()">
+    <button #btn [class]="classList()" [disabled]="loading()" [type]="type()">
       @if(loading()) {
       <i class="{{ loadingIcon() }}" [ngClass]="loadingIcon() && icon() ? 'me-1': ''"></i>
       } @if(icon() && iconPos() === 'left') {
@@ -41,6 +41,7 @@ export class ButtonComponent {
   shadow = input<boolean>(false);
   rounded = input<boolean>(false);
   outlined = input<boolean>(false);
+  type = input<string>('button');
 
   private _classList = signal<string[]>(['n-button']);
   classList = computed(() => this._classList());

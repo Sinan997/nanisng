@@ -10,7 +10,7 @@ import { ButtonComponent } from 'nanisng/button';
 export class ButtonIntroComponent {
   loading = signal(false);
 
-  makeLoading(){
+  makeLoading() {
     this.loading.set(true);
     setTimeout(() => {
       this.loading.set(false);
