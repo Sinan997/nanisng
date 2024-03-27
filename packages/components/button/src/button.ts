@@ -1,4 +1,4 @@
-import { NgClass } from '@angular/common';
+import { NgClass, NgTemplateOutlet } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -13,19 +13,30 @@ import {
 @Component({
   selector: 'n-button',
   standalone: true,
-  imports: [NgClass],
+  imports: [NgClass, NgTemplateOutlet],
   template: `
     <button #btn [class]="classList()" [disabled]="loading()" [type]="type()">
       @if(loading()) {
       <i class="{{ loadingIcon() }}" [ngClass]="loadingIcon() && icon() ? 'me-1': ''"></i>
-      } @if(icon() && iconPos() === 'left') {
-      <i class="{{ icon() }}"></i>
-      {{ label() }}
+      } 
+      @if(icon() && iconPos() === 'left') {
+        <i class="{{ icon() }}"></i>
+        {{ label() }}
+        <ng-container *ngTemplateOutlet="ngContent"></ng-container>
+      }@else if(icon() && iconPos() === 'right'){
+        <ng-content></ng-content>
+        {{ label() }}
+        <i class="{{ icon() }}"></i>
+        <ng-container *ngTemplateOutlet="ngContent"></ng-container>
       }@else {
-      {{ label() }}
-      <i class="{{ icon() }}"></i>
+        {{ label() }}
+        <ng-container *ngTemplateOutlet="ngContent"></ng-container>
       }
     </button>
+
+    <ng-template #ngContent>
+      <ng-content></ng-content>
+    </ng-template>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
@@ -46,7 +57,15 @@ export class ButtonComponent {
   private _classList = signal<string[]>(['n-button']);
   classList = computed(() => this._classList());
 
+  ngOnInit(): void {
+    this.updateClasses();
+  }
+
   ngOnChanges(changes: SimpleChanges): void {
+    this.updateClasses();
+  }
+
+  updateClasses() {
     this.updateColor();
     this.updateShadowClass();
     this.updateRoundedClass();
@@ -71,11 +90,11 @@ export class ButtonComponent {
     if (this.loading() || this.disabled()) {
       this._classList.update((classList) => [
         ...classList,
-        'n-button-disabled',
+        'n-disabled',
       ]);
     } else {
       this._classList.update((classList) =>
-        classList.filter((c) => c !== 'n-button-disabled')
+        classList.filter((c) => c !== 'n-disabled')
       );
     }
   }
@@ -113,5 +132,5 @@ export class ButtonComponent {
     }
   }
 
-  resetButtonText() {}
+  resetButtonText() { }
 }
